@@ -1,0 +1,436 @@
+.latest-news,
+.funding-rounds,
+.article-categories,
+.latest-deals {
+  width: 95%;
+  margin: auto;
+}
+
+/* Navbar */
+
+#top-navbar {
+  height: 32px;
+  width: 100%;
+  
+  background-color: #131313;
+}
+
+#fixed-navbar {
+  width: 100%;
+  
+  z-index: 100;
+}
+
+#department-bar {
+  height: 48px;
+  
+  background-color: #f9f9f9;
+}
+
+#nav-logo {
+  display: none;
+  float: left;
+  
+  height: 100%;
+  width: 100px;
+  
+  background-color: #f93c2f;
+}
+
+#announcement-bar {  
+  height: 30px;
+  
+  background-color: #ffdd33;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+.sticky + .main-content-wrapper {
+  padding-top: 32px;
+}
+
+/* Featured Articles */
+
+.featured-articles-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+    "main main side-top"
+    "main main side-bottom";
+  grid-gap: 10px;
+  align-items: stretch;
+  height: 554px;
+  margin: 2px auto;
+}
+
+#featured-article-TNW-logo {
+  
+}
+
+#main {
+  grid-area: main;
+  
+  background-color: #057f72;
+}
+
+#second {
+  grid-area: side-top;
+  
+  background-color: #360580;
+}
+
+#third {
+  grid-area: side-bottom;
+  
+  background-color: #4f8005;
+}
+
+/* Latest Articles / Deals */
+
+.latest-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section-title {
+  width: 100%;
+  margin: 82px 13px 0;
+  
+  font: bold 26px "Avalon", sans-serif;
+  font-weight: 1000;
+  letter-spacing: .03em;
+  color: #ff4422;
+}
+
+.section-title.latest-deals {
+  margin-left: 0;
+}
+
+.latest-article,
+.funding-venture {
+  width: 25%;
+  padding: 13px;
+}
+
+.latest-article {
+  font-family: ARS Maquette, Helvetica Neue, Arial, sans-serif;
+}
+
+.latest-article > .photo {
+  background-color: #360580;
+  
+  width: 100%;
+  height: 135px;
+}
+
+.latest-article > .headline {
+  margin: 7px 0;
+  
+  font-size: 16px;
+  font-weight: 1000;
+  line-height: 18px;
+  letter-spacing: .02em;
+}
+
+.latest-article > .author-and-date {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+.latest-deals-top-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.latest-deals-top-bar > * {
+  width: auto;
+}
+
+.latest-deals > .latest-container > .latest-article > .photo {
+  height: 200px;
+}
+
+/* Funding Rounds */
+
+.funding-top-bar {
+  position: relative;
+  
+  display: flex;
+  vertical-align: baseline;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.funding-nav, 
+.latest-deals-top-bar {
+  margin: 0 14px 10px;
+  align-self: flex-end;
+  width: 100%;
+  
+  font-size: 16px;
+  font-family: ARS Maquette, Helvetica Neue, Arial, sans-serif;
+  text-align: right;
+  color: #ff4422;
+}
+
+.funding-ventures-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.funding-venture {
+  position: relative;
+  
+  width: 25%;
+  margin: 20px 13px 0;
+  height: 265px;
+  
+  background-image: 
+    linear-gradient(
+      #ff4422,
+      #ff4422 15%,
+      #ffebe7 15%,
+      #ffebe7 38%,
+      #fffaf8 38%
+    );
+}
+
+.funding-company-logo {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  
+  height: 60px;
+  width: 60px;
+  
+  background-color: #065b82;
+}
+
+.funding-company-name,
+.funding-company-capital,
+.funding-company-series {
+  position: absolute;
+  left: 85px;
+}
+
+.funding-company-name,
+.funding-company-capital {  
+  font: bold 16px "Avalon", sans-serif;
+  font-weight: 1000;
+  letter-spacing: .03em;
+}
+
+.funding-company-name {
+  color: white;
+}
+
+.funding-company-capital {
+  top: 50px;
+}
+
+.funding-company-series {
+  top: 68px;
+  
+  font: 11px Shentox, sans-serif;
+  letter-spacing: .02em;
+  color: #667;
+}
+
+/* Article Categories */
+
+.article-categories-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.article-category {  
+  width: 33%;
+  padding: 10px;
+}
+
+.article-category-title {
+  margin-left: 0;
+}
+
+.article-category-photo {
+  position: relative;
+  
+  margin-top: 12px;
+  width: 100%;
+  height: 270px;
+  
+  background-color: #5b639b;
+}
+
+.most-popular,
+.article-category-popular-headline,
+.article-category-popular-author,
+.latest-category,
+.latest-headline {
+  position: absolute;
+  
+  margin: auto 12px 0;
+  height: auto;
+  
+  color: pink;
+}
+
+.most-popular,
+.latest-category {  
+  font-family: Shentox, sans-serif;
+  font-weight: 500;
+  letter-spacing: .04em;
+  line-height: 1.5;
+}
+
+.most-popular {
+  bottom: 100px;
+}
+
+.article-category-popular-headline {
+  bottom: 34px;
+  
+  font: bold 18px "Avalon", sans-serif;
+  line-height: 22px;
+}
+
+.article-category-popular-author {
+  bottom: 12px;
+  
+  font-family: ARS Maquette, Helvetica Neue, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.article-category-latest {
+  position: relative;
+  
+  margin-top: 1px;
+  height: 100px;
+  
+  background-color: #fff4f2;
+}
+
+.latest-photo {
+  position: absolute;
+  right: 0;
+  
+  height: 100%;
+  width: 100px;
+  
+  background-color: #274157;
+}
+
+.latest-category {
+  top: 8px;
+  
+  color: #ff4422;
+}
+
+.latest-headline {
+  top: 30px;
+  
+  width: 70%;
+  
+  font: bold 14px "Avalon", sans-serif;
+  line-height: 20px;
+  color: #ff4422;
+}
+
+.categorized-articles {
+  padding-left: 16px;
+}
+
+.categorized-article {
+  height: auto;
+  padding: 12px;
+  border-bottom: 1px solid lightgrey;
+  
+  color: #ff4422;
+  
+  list-style-type: disc;
+}
+
+.categorized-article-headline,
+.copyright-footer-container {
+  color: #444;
+  
+  margin: auto;
+  
+  font-family: ARS Maquette,Helvetica Neue,Arial,sans-serif;
+  font-size: 13px;
+}
+
+/* Footer */
+
+#site-footer {
+  position: relative;
+  
+  margin-top: 65px;
+  height: 258px;
+}
+
+#company-footer {
+  height: 63%;
+  
+  background-color: #131313;
+}
+
+#copyright-footer {
+  position: relative;
+  
+  height: 37%;
+  
+  background-color: black;
+}
+
+#footer-buttons-container,
+#footer-link-container {
+  position: relative;
+  
+  display: flex;
+  justify-content: center;
+}
+
+#footer-buttons-container {
+  top: 40px;
+}
+
+#footer-link-container {
+  top: 58px;
+}
+
+.footer-button {
+  height: 42px;
+  width: 42px;
+  margin: 8px;
+  
+  background-color: #333;
+  border: none;
+  border-radius: 50%;
+}
+
+.footer-link {
+  margin: 3px;
+  
+  font: bold 13px "Avalon", sans-serif;
+  line-height: 20px;
+  color: #888;
+}
+
+.copyright-footer-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  text-align: center;
+  color: #888;
+}
