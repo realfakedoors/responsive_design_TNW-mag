@@ -1,0 +1,112 @@
+/* We can switch the layout if the screen is 1024 px wide (or less). */
+
+@media screen and (max-width: 1024px) {
+  
+  /* We'll send our site's logo to the navbar, */
+  
+  #featured-article-TNW-logo {
+    display: none;
+  }
+  
+  #nav-logo {
+    display: inline-block;
+  }
+  
+  /* drop down the font sizes on all articles, */
+  
+  .featured-article-headline {  
+    font-size: 18px;
+  }
+  
+  .featured-article-headline.main {  
+    font-size: 34px;
+  }
+  
+  .latest-article > .headline {
+    font-size: 13px;
+  }
+  
+  /* cut off our fourth funding venture, */
+  
+  .funding-venture {
+    width: 33%;
+  }
+  
+  .funding-venture.last {
+    display: none;
+  }
+  
+  /* and rearrange a few of our sections' contents. */
+  
+  .latest-article {
+    width: 33%;
+    padding: 8px;
+  }
+  
+  .article-category {
+    width: 50%;
+  }
+  
+  .funding-top-bar {
+    flex-direction: column;
+  }
+  
+  .funding-nav {
+    align-self: flex-start;
+    text-align: left;
+    margin-top: 10px;
+  }
+}
+
+/* We'll switch it again if we're 768px wide (or less). */
+
+@media screen and (max-width: 768px) {
+  
+  /* We'll hide our topmost navbar, */
+  
+  #top-navbar {
+    display: none;
+  }
+  
+  /* move all our header's text into a hamburger drop-down, */
+  
+  .top-nav-text {
+    display: none;
+  }
+  
+  .hamburger {
+    display: inline-block;
+  }
+  
+  /* and stack all our content sections vertically. */
+  
+  .featured-articles-container {
+    position: relative;
+    top: 90px;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "main"
+    "side-top"
+    "side-bottom";
+    grid-gap: 10px;
+    
+    align-items: stretch;
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 250px;
+  }
+  
+  .featured-article {
+    height: 250px;
+  }
+  
+  .latest-article,
+  .funding-venture,
+  .article-category {
+    width: 100%;
+  }
+  
+}

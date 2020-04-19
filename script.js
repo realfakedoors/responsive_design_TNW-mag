@@ -27,3 +27,9 @@ document.addEventListener('DOMContentLoaded', function (){
   }
   
 })
+
+// Dropdown menu in top navbar (only shows when screen is 768px or less).
+  
+function hamburgerDropdown() {
+  document.getElementById("hamburger-dropdown").classList.toggle("show");
+}

@@ -6,26 +6,113 @@
   <title>TNW</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="queries.css">
   <script type="text/javascript" src="script.js"></script>
 </head>
 
 <body>
   <header>
-    <div id="top-navbar"></div>
+    <nav id="top-navbar">
+      <span class="top-nav-text company" id="top-nav-news">News</span>
+      <span class="top-nav-text company">TNW2020</span>
+      <span class="top-nav-text company">Business</span>
+      <span class="top-nav-text company">AMAs</span>
+      <span class="top-nav-text company">Spaces</span>
+      <span class="top-nav-text company" id="top-nav-terms">Terms & Conditions</span>
+      <span class="top-nav-text company">About</span>
+      <span class="top-nav-text company">Advertise</span>
+      <span class="top-nav-text company">Jobs</span>
+      <span class="top-nav-text company">Contact</span>
+    </nav>
     <div id="fixed-navbar">
-      <div id="department-bar">
-        <div id="nav-logo"></div>
-      </div>
-      <div id="announcement-bar"></div>
+      <nav id="department-bar">
+        <span id="nav-logo"></span>
+        <span class="top-nav-text department">LATEST</span>
+        <span class="top-nav-text department">HARD FORK</span>
+        <span class="top-nav-text department">PLUGGED</span>
+        <span class="top-nav-text department">FUNDAMENTALS</span>
+        <span class="top-nav-text department">README</span>
+        <span class="top-nav-text department">GROWTH QUARTERS</span>
+        <span class="top-nav-text department" id="neural">NEURAL</span>
+        <span class="right-side-container">
+          <span class="hamburger">
+            <button onclick="hamburgerDropdown()" id="hamburger-button">
+              <img src="static/hamburger-icon.png">
+            </button>
+            <div id="hamburger-dropdown">
+              <div class="hamburger-dropdown-container">
+                <div class="hamburger-dropdown-item">News</div>
+                <div class="hamburger-dropdown-item">Business</div>
+                <div class="hamburger-dropdown-item">Latest</div>
+                <div class="hamburger-dropdown-item">Popular</div>
+                <hr  class="hamburger-dropdown-rule" />
+                <div class="hamburger-dropdown-item">Tech</div>
+                <div class="hamburger-dropdown-item">Gadgets</div>
+                <div class="hamburger-dropdown-item">Lifestyle</div>
+                <div class="hamburger-dropdown-item">More Tech</div>
+              </div>
+            </div>
+          </span>
+          <span id="magnifying-glass">
+            <img src="static/magnifying-glass.png">
+          </span>
+        </span>
+      </nav>
+      <nav id="announcement-bar">
+        <span class="top-nav-text">
+          Did you know we have a TECH FESTIVAL? Check it out ~
+        </span>
+      </nav>
     </div>
   </header>
   <div class="main-content-wrapper">
     <section class="featured-articles">
       <div class="featured-articles-container">
-        <div id="featured-article-TNW-logo"></div>
-        <div id="main"   class="featured-article"></div>
-        <div id="second" class="featured-article"></div>
-        <div id="third"  class="featured-article"></div>
+        <div id="main" class="featured-article">
+          <div id="featured-article-TNW-logo">
+            TNW
+          </div>
+          <div class="featured-article-date">
+            Friday -- April 17, 2020
+          </div>
+          <div class="featured-article-info-wrapper">
+            <h6 class="featured-section-title">
+              WORLD
+            </h6>
+            <h1 class="featured-article-headline main">
+              Why the world needs to harness spider energy. Now.
+            </h1>
+            <nav class="featured-article-info-nav">
+              by The Elite Society Preservation Fund - 10 hours ago - 0 shares
+            </nav>
+          </div>
+        </div>
+        <div id="second" class="featured-article">
+          <div class="featured-article-info-wrapper">
+            <h6 class="featured-section-title">
+              SPACE
+            </h6>
+            <h1 class="featured-article-headline">
+              Are we ready for interdimensional wormholes?
+            </h1>
+            <nav class="featured-article-info-nav">
+              by The Search for Extradimensional Life - 11 hours ago - 77 shares
+            </nav>
+          </div>
+        </div>
+        <div id="third"  class="featured-article">
+          <div class="featured-article-info-wrapper">
+            <h6 class="featured-section-title">
+              DIRT
+            </h6>
+            <h1 class="featured-article-headline">
+              Is there intelligent microscopic life in Earth's soil?
+            </h1>
+            <nav class="featured-article-info-nav">
+              by The Search for Terrestrial Life - 1 hour ago - 15 shares
+            </nav>
+          </div>
+        </div>
       </div>
     </section>
     
@@ -117,7 +204,7 @@
             SERIES C
           </h6>
         </div>
-        <div class="funding-venture">
+        <div class="funding-venture last">
           <div class="funding-company-logo"></div>
           <h5 class="funding-company-name">
             CleanSlate UV

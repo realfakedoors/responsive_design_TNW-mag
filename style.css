@@ -6,13 +6,43 @@
   margin: auto;
 }
 
+.main-content-wrapper {
+  overflow: hidden;
+}
+
 /* Navbar */
+
+#top-navbar,
+#department-bar {
+  display: flex;
+  align-items: center;
+}
 
 #top-navbar {
   height: 32px;
-  width: 100%;
   
   background-color: #131313;
+  color: #888;
+}
+
+.top-nav-text.company {
+  margin: auto 10px;
+  
+  font: 14px sans-serif;
+}
+
+.top-nav-text.department {
+  margin: auto 13px;
+  
+  font: 13px sans-serif;
+}
+
+#top-nav-news {
+  color: white;
+}
+
+#top-nav-terms {
+  flex: 1;
 }
 
 #fixed-navbar {
@@ -22,9 +52,12 @@
 }
 
 #department-bar {
+  position: relative;
+  
   height: 48px;
   
   background-color: #f9f9f9;
+  color: #999;
 }
 
 #nav-logo {
@@ -37,8 +70,75 @@
   background-color: #f93c2f;
 }
 
+.right-side-container {
+  margin-left: auto;
+  display: flex;
+}
+
+#neural {
+  flex: 1;
+}
+
+#magnifying-glass, 
+.hamburger {
+  height: 100%;
+  width: 42px;
+  padding: 10px;
+  border-left: 1px solid #999;
+}
+
+.hamburger {
+  display: none;
+  right: 0;
+}
+
+#hamburger-dropdown {
+  position: absolute;
+  top: 50px;
+  right: -16px;
+  z-index: 100;
+
+  display: none;
+  width: 255px;
+  padding-bottom: 6px;
+  
+  background-color: #e5f0a0;
+}
+
+.hamburger-dropdown-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hamburger-dropdown-container > * {
+  margin: 8px 0 0;
+}
+
+.show {
+  display: inline !important;
+}
+
+.hamburger-dropdown-rule {
+  width: 90%;
+}
+
+.hamburger > button > img,
+#magnifying-glass > img {
+  width: 100%;
+  height: 20px;
+}
+
 #announcement-bar {  
+  clear: left;
+  
+  display: flex;
+  align-items: center;
   height: 30px;
+  padding-left: 10px;
+  
+  font: 14px sans-serif;
   
   background-color: #ffdd33;
 }
@@ -55,6 +155,8 @@
 /* Featured Articles */
 
 .featured-articles-container {
+  position: relative;
+  
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -68,7 +170,70 @@
 }
 
 #featured-article-TNW-logo {
+  position: absolute;
+  z-index: 1;
   
+  padding-left: 20px;
+  height: 100%;
+  width: 100%;
+  
+  background-image: linear-gradient(
+                      160deg, 
+                      #f08877,
+                      rgba(201, 201, 201, 0) 99%
+                    );
+  
+  font: bold 122px Times, serif;
+  font-weight: 1000;
+}
+
+.featured-article-info-wrapper {
+  position: absolute;
+  bottom: 10px;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-article-headline,
+.featured-article-info-nav,
+.featured-section-title,
+.featured-article-date {
+  position: relative;
+  z-index: 2;
+  
+  margin: auto 10px 4px;
+  
+}
+
+.featured-article {
+  position: relative;
+  
+  color: white;
+}
+
+.featured-article-date {
+  position: absolute;
+  right: 0;
+  
+  margin: 15px 20px;
+  
+  font: 14px Helvetica Neue, Arial, sans-serif;
+  text-align: right;
+}
+
+.featured-article-headline {
+  font: bold 26px "Avalon", sans-serif;
+  font-weight: 1000;
+  width: 70%;
+}
+
+.featured-article-headline.main {
+  font-size: 54px;
+}
+
+.featured-article-info-nav {
+  width: 100%;
 }
 
 #main {
@@ -116,7 +281,8 @@
   padding: 13px;
 }
 
-.latest-article {
+.latest-article,
+.featured-article-info-nav {
   font-family: ARS Maquette, Helvetica Neue, Arial, sans-serif;
 }
 
@@ -136,7 +302,8 @@
   letter-spacing: .02em;
 }
 
-.latest-article > .author-and-date {
+.latest-article > .author-and-date,
+.featured-article-info-nav {
   font-size: 12px;
   color: #b3b3b3;
 }
@@ -171,7 +338,7 @@
 .latest-deals-top-bar {
   margin: 0 14px 10px;
   align-self: flex-end;
-  width: 100%;
+  width: 95%;
   
   font-size: 16px;
   font-family: ARS Maquette, Helvetica Neue, Arial, sans-serif;
@@ -179,15 +346,19 @@
   color: #ff4422;
 }
 
+.funding-nav {
+  width: 100%;
+}
+
 .funding-ventures-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .funding-venture {
   position: relative;
   
-  width: 25%;
   margin: 20px 13px 0;
   height: 265px;
   
@@ -277,8 +448,6 @@
   
   margin: auto 12px 0;
   height: auto;
-  
-  color: pink;
 }
 
 .most-popular,
